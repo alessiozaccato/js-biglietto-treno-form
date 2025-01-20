@@ -44,7 +44,8 @@
 
                 <div class="d-grid gap-2 col-2 mx-auto">
                     <button id="generateButton" class="btn btn-danger" type="button">Genera</button>
-                    <button id="endButton" class="btn btn-danger" type="button">Annulla</button>
+                    <!-- call the function from js -->
+                    <button onclick="refreshPage()" class="btn btn-danger">Annulla</button>
                 </div>
 
 
@@ -52,12 +53,37 @@
 
         </section>
 
-        <section>
+        <section class="row bg-light">
 
-            <h1 class="text-center text-white">Il Tuo Biglietto</h1>
+            <h1 class="text-center text-white bg-danger py-2">Il Tuo Biglietto</h1>
 
-            <div id="result" class="text-white">
+            <h3 class="">DETTAGLIO PASSEGGERI</h3>
+            <hr>
 
+            <div class="col-4 bg-light">
+                <h3>NOME PASSEGGERO</h3>
+                <p id="name"></p>
+
+
+            </div>
+            <div class="col-2 bg-light">
+                <h4>Offerta</h4>
+                <p id="sale"></p>
+
+            </div>
+            <div class="col-2 bg-light">
+                <h4>Carrozza</h4>
+                <p id="route"></p>
+
+            </div>
+            <div class="col-2 bg-light">
+                <h4>Codice CP</h4>
+                <p id="cpCode"></p>
+
+            </div>
+            <div class="col-2 bg-light">
+                <h4>Costo Biglietto</h4>
+                <p id="resultTicket"></p>
             </div>
 
         </section>
