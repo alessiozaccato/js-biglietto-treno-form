@@ -19,10 +19,10 @@
 
 //PREPARATION PHASE
 
-let age = parseInt(prompt("inserisci la tua età"))
+// let age = parseInt(prompt("inserisci la tua età"))
 console.log("La tua età è:", age)
 
-let kmNumber = parseInt(prompt("Inserisci i Kilometri che vuoi percorrere"))
+// let kmNumber = parseInt(prompt("Inserisci i Kilometri che vuoi percorrere"))
 console.log("I kilometri che vuoi percorrere sono:", kmNumber)
 
 let price = kmNumber * 0.21
