@@ -13,6 +13,8 @@ let routeHtml = document.getElementById("route");
 let cpCodeHtml = document.getElementById("cpCode");
 let saleHtml = document.getElementById("sale");
 
+let hidden = document.getElementById("hiddenDiv");
+
 
 
 
@@ -31,24 +33,45 @@ function calc(numberKm, numberAgeSelect) {
 
     if (numberAgeSelect == 1) {
 
-        offerta = "offerta minorenni";
-        return price = price - (price * 0.2);
-
+        price = price - (price * 0.2);
     }
 
     else if (numberAgeSelect == 3) {
 
-        offerta = "offerta over65";
-        return price = price - (price * 0.4);
-
+        price = price - (price * 0.4);
     }
 
     else {
 
-        offerta = "offerta standard";
-        return price;
-
+        price;
     }
+    return price;
+
+}
+
+//let's do a function for sale 
+function saleCheck(numberAgeSelect) {
+
+    numberAgeSelect = numberAgeSelect.value;
+
+
+    if (numberAgeSelect == 1) {
+
+        saleType = "offerta minorenni";
+    }
+
+    else if (numberAgeSelect == 3) {
+
+        saleType = "offerta over 65";
+    }
+
+    else {
+
+        saleType = "offerta standard";
+    }
+    return saleType;
+
+
 }
 
 //decler the function to refresh the page
@@ -77,6 +100,8 @@ btnGenerate.addEventListener("click", function () {
     resultName.innerHTML = inputNameHtml.value;
     routeHtml.innerHTML = random();
     cpCodeHtml.innerHTML = randomCP();
+    saleHtml.innerHTML = saleCheck(inputAgeSelect);
+    hidden.classList.remove("d-none");
 })
 
 

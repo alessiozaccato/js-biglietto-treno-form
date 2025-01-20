@@ -17,7 +17,8 @@
     </header>
 
     <main class="container">
-        <section class="row bg-light">
+        <form class="row bg-light">
+
             <div class="col-4">
                 <div class="mb-3">
                     <label class="text-danger" for="nameInput" class="form-label">Nome</label>
@@ -34,7 +35,7 @@
             </div>
             <div class="col-4">
                 <label class="text-danger" for="ageselect">Fascia di età</label>
-                <select id="ageselect" class="form-select" aria-label="Default select example">
+                <select id="ageselect" class="form-select form-control" aria-label="Default select example">
                     <option value="1">Minorenne</option>
                     <option value="2">Maggiorenne</option>
                     <option value="3">Over 65</option>
@@ -47,20 +48,18 @@
                     <!-- call the function from js -->
                     <button onclick="refreshPage()" class="btn btn-danger">Annulla</button>
                 </div>
-
-
             </div>
 
-        </section>
+        </form>
 
-        <section class="row bg-light">
+        <section id="hiddenDiv" class="row bg-light d-none">
 
             <h1 class="text-center text-white bg-danger py-2">Il Tuo Biglietto</h1>
 
             <h3 class="">DETTAGLIO PASSEGGERI</h3>
             <hr>
 
-            <div class="col-4 bg-light">
+            <div class="col-4 bg-secondary">
                 <h3>NOME PASSEGGERO</h3>
                 <p id="name"></p>
 
@@ -85,6 +84,7 @@
                 <h4>Costo Biglietto</h4>
                 <p id="resultTicket"></p>
             </div>
+            <h1 class="text-center">Buon Viaggio da Boolitalia!!!</h1>
 
         </section>
     </main>
